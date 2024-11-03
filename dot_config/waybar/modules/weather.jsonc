@@ -1,0 +1,6 @@
+"custom/weather": {
+    "exec": "echo  $(bash ~/.local/share/bin/weather.sh)",
+    "restart-interval": 600,
+    "on-click": "weather.sh",
+    "tooltip": false
+},

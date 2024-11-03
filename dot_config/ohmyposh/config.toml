@@ -1,0 +1,104 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+final_space = true
+version = 2
+
+[palette]
+os = "#ACB0BE"
+closer = "p:os"
+pink = "#F5C2E7"
+lavender = "#B4BEFE"
+blue = "#89B4FA"
+red = "##f38ba8"
+yellow = "#f9e2af"
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+newline = true
+
+
+  [[blocks.segments]]
+  foreground = "p:os"
+  style = "plain"
+  template = "{{.Icon}} "
+  type = "os"
+
+  [[blocks.segments]]
+  foreground = "p:blue"
+  style = "plain"
+  template = "{{ .UserName }}@{{ .HostName }} "
+  type = "session"
+
+  [[blocks.segments]]
+    background = 'transparent'
+    foreground = "p:pink"
+    style = "plain"
+    template = "{{ .Path }} "
+    type = "path"
+
+    [blocks.segments.properties]
+      folder_icon = "...."
+      home_icon = "~"
+      style = "full"
+  [[blocks.segments]]
+    foreground = "p:lavender"
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:blue>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    style = "plain"
+    type = "git"
+
+    [blocks.segments.properties]
+      branch_icon = " "
+      cherry_pick_icon = " "
+      commit_icon = " "
+      fetch_status = true
+      fetch_upstream_icon = false
+      merge_icon = " "
+      no_commits_icon = " "
+      rebase_icon = " "
+      revert_icon = " "
+      tag_icon = " "
+
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'p:yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 500
+
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    style = "plain"
+    foreground = "p:pink"
+    foreground_templates = [
+      "{{if gt .Code 0}}p:red{{end}}",
+      "{{if gt .Code 0}}p:pink{{end}}",
+    ]
+    template = '❯ '
+    type = "text"
+
+[transient_prompt]
+  foreground_templates = [
+    "{{if gt .Code 0}}p:red{{end}}",
+    "{{if gt .Code 0}}p:pink{{end}}",
+  ]
+  foreground = 'p:pink'
+  background = 'transparent'
+  template = '❯ '
+
+[secondary_prompt]
+  foreground = 'p:pink'
+  background = 'transparent'
+  template = '❯❯ '

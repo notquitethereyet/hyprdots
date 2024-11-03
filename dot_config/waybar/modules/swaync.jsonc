@@ -1,0 +1,5 @@
+"custom/swaync": {
+    "exec": "echo ",
+    "restart-interval": 600,
+    "on-click": "swaync-client -t -sw"
+},
