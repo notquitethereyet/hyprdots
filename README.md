@@ -39,6 +39,6 @@ Made this because i was kinda tired of having to call my wallpapers to the theme
 1. ![chezmoi quick start](https://www.chezmoi.io/quick-start/#start-using-chezmoi-on-your-current-machine)
 2. To use chezmoi to do the dotfile thingy, run `chezmoi init git@github.com:notquitethereyet/hyprdots.git`
 3. Then run this `chezmoi update -v` 
-![state mandated fetch screenshot](https://github.com/notquitethereyet/dotfiles/blob/main/hyprdots.png?raw=true)
-![wife lockscreen](https://github.com/notquitethereyet/dotfiles/blob/main/hyprlock.png?raw=true)
+![state mandated fetch screenshot](https://github.com/notquitethereyet/hyprdots/blob/main/hyprdots.png?raw=true)
+![wife lockscreen](https://github.com/notquitethereyet/hyprdots/blob/main/hyprlock.png?raw=true)
 
